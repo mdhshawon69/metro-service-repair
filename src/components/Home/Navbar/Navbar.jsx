@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import { images } from "../../public/assets/images";
+import { images } from "../../../public/assets/images";
 import { BsFacebook } from "react-icons/bs";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { FaTimes } from "react-icons/fa";
@@ -9,7 +9,7 @@ import { FaTimes } from "react-icons/fa";
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
-    <div className='px-5 h-20 md:px-10 lg:px-20 xl:px-40 flex justify-between items-center relative '>
+    <div className='px-5 h-20 md:px-10 lg:px-20 xl:px-40 flex justify-between items-center relative'>
       <Link href='/'>
         <Image src={images.logo} />
       </Link>

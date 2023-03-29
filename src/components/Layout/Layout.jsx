@@ -1,13 +1,21 @@
+import { useRouter } from "next/router";
 import React from "react";
-import Navbar from "../Navbar/Navbar";
-import SubNav from "../SubNav/SubNav";
+import Footer from "../Home/Footer/Footer";
+import Navbar from "../Home/Navbar/Navbar";
+import SubNav from "../Home/SubNav/SubNav";
 
 const Layout = ({ children }) => {
+  const router = useRouter();
   return (
     <div className=''>
-      <SubNav />
-      <Navbar />
+      {router.pathname !== "/admin" && (
+        <div className='div'>
+          <SubNav />
+          <Navbar />
+        </div>
+      )}
       {children}
+      {router.pathname !== "/admin" && <Footer />}
     </div>
   );
 };
