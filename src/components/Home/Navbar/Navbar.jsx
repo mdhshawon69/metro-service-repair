@@ -37,6 +37,11 @@ const Navbar = () => {
           className='border-b-2 border-transparent hover:border-b-2 lg:hover:border-[#0288D1] hover:border-[#fff] transition-all delay-100'>
           <Link href='#'>আমাদের সম্পর্কে</Link>
         </li>
+        <li
+          onClick={() => setShowMenu(false)}
+          className='border-b-2 border-transparent hover:border-b-2 lg:hover:border-[#0288D1] hover:border-[#fff] transition-all delay-100'>
+          <Link href='/admin'>Admin</Link>
+        </li>
         <li className='flex justify-center text-xl items-center'>
           <a href='' target='_blank'>
             <BsFacebook className='text-[#0288D1]' />

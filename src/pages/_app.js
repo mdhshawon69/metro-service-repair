@@ -5,6 +5,10 @@ import "aos/dist/aos.css";
 import "@splidejs/react-splide/css";
 import Aos from "aos";
 import localFont from "@next/font/local";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+
+const queryClient = new QueryClient();
 
 const noirrit = localFont({
   src: [
@@ -34,9 +38,12 @@ function MyApp({ Component, pageProps }) {
   if (typeof window !== "undefined") {
     return (
       <main className={`${noirrit.variable} font-sans`}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <QueryClientProvider client={queryClient}>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+          <ReactQueryDevtools />
+        </QueryClientProvider>
       </main>
     );
   }

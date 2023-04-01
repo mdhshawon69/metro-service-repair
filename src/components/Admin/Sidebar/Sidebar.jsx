@@ -12,7 +12,7 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import AdminNavbar from "../AdminNavbar/AdminNavbar";
 
-export default function Sidebar() {
+export default function Sidebar({ setShowPage, showPage }) {
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -39,21 +39,14 @@ export default function Sidebar() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}>
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem key={text} disablePadding>
+        {["Dashboard", "Services", "Reviews", "Messages"].map((text, index) => (
+          <ListItem
+            onClick={() => setShowPage(text)}
+            className={`hover:bg-[#0288D1] hover:text-white ${
+              showPage === text && "bg-[#0288D1] text-white"
+            }`}
+            key={text}
+            disablePadding>
             <ListItemButton>
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}

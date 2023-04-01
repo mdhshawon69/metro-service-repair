@@ -2,10 +2,10 @@ import React from "react";
 import Swal from "sweetalert2";
 import { images } from "../../../public/assets/images";
 
-const Services = () => {
+const Services = ({ setShowModal }) => {
   const services = [1, 2, 3, 4, 5, 6];
   const triggerSwrl = () => {
-    Swal.fire("Good job!", "You clicked the button!", "success");
+    setShowModal(true);
   };
   return (
     <div className='px-5 md:px-10 lg:px-20 xl:px-40 pb-20'>
@@ -20,14 +20,14 @@ const Services = () => {
             className='text-center'
             key={item}>
             <img
-              className='w-full h-full object-contain'
+              className='w-full h-full object-contain '
               src={images.serviceImg.src}
               alt=''
             />
             <h4 className='text-[22px] my-5'>এসি সার্ভিসিং এবং অন্যান্য</h4>
             <button
               onClick={triggerSwrl}
-              className='py-2 px-8 bg-[#0288D1] transition-all duration-300 hover:bg-[#165e85] rounded-3xl text-white'>
+              className='py-2 px-8 bg-[#0288D1] transition-all hover:scale-110 duration-300 ease-in-out hover:bg-[#165e85] rounded-3xl text-white'>
               বিস্তারিত
             </button>
           </div>

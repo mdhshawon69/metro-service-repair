@@ -1,0 +1,10 @@
+GET http://localhost:3000/api/service
+
+# POST http://localhost:3000/api/service HTTP/1.1
+# content-type: application/json
+
+# {
+#     "title": "Test5",
+#     "price": "34",
+#     "is_active": true
+# }
