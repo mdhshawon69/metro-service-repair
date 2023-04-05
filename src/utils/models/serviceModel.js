@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const serviceSchema = new mongoose.Schema({
+const ServiceSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
@@ -10,7 +10,7 @@ const serviceSchema = new mongoose.Schema({
   },
   service_varients: [
     {
-      type: mongoose.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "ServiceVarient",
     },
   ],
@@ -21,6 +21,6 @@ const serviceSchema = new mongoose.Schema({
 });
 
 const Service =
-  mongoose.models.service || mongoose.model("service", serviceSchema);
+  mongoose.models.Service || mongoose.model("Service", ServiceSchema);
 
 export default Service;

@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        noirrit: ["var(--font-noirrit)"],
+        noirrit: ["Li Ador Noirrit", "sans-serif"],
       },
     },
   },

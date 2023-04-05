@@ -133,16 +133,24 @@ export default function DataTable() {
           <TableRow>
             <TableCell />
             <TableCell>
-              <span className='font-bold text-md'>গ্রাহকের নাম</span>
+              <span className='font-bold text-lg font-bangla'>
+                গ্রাহকের নাম
+              </span>
             </TableCell>
             <TableCell align='right'>
-              <span className='font-bold text-md'>মোবাইল নম্বর</span>
+              <span className='font-bold text-lg font-bangla'>
+                মোবাইল নম্বর
+              </span>
             </TableCell>
             <TableCell align='right'>
-              <span className='font-bold text-md'>সার্ভিস এর ধরন</span>
+              <span className='font-bold text-lg font-bangla'>
+                সার্ভিস এর ধরন
+              </span>
             </TableCell>
             <TableCell align='right'>
-              <span className='font-bold text-md'>সিরিয়াল নম্বর </span>
+              <span className='font-bold text-lg font-bangla'>
+                সিরিয়াল নম্বর{" "}
+              </span>
             </TableCell>
             <TableCell align='right'>Protein&nbsp;(g)</TableCell>
           </TableRow>

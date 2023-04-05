@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <div className='font-noirrit flex lg:justify-between items-center px-5 md:px-10 lg:px-20 xl:px-40 bg-[#e6f3fa] lg:h-[83vh] h-screen flex-col-reverse lg:flex-row'>
       <div className='flex-1' data-aos='fade-right' data-aos-duration='700'>
-        <h1 className='2xl:text-[55px] md:text-[40px] text-[35px] lg:text-left sm:mx-auto sm:my-5 lg:my-0 font-bold'>
+        <h1 className='2xl:text-[55px] md:text-[40px] text-[35px] lg:text-left sm:mx-auto sm:my-5 lg:my-0 font-bold font-bangla'>
           <span className='inline-block '>আমাদের সাথে সরাসরি</span>{" "}
           <span className='inline-block'>যোগাযোগ করতে</span>{" "}
           <span className='inline-block'>কল করুন।</span>

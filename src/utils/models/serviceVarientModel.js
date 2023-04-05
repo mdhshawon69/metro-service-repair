@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const servicVarientSchema = new mongoose.Schema({
+const ServiceVarientSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
@@ -12,10 +12,13 @@ const servicVarientSchema = new mongoose.Schema({
   what_includes: {
     type: Array,
   },
+  ac_weight: {
+    type: String,
+  },
 });
 
 const ServiceVarient =
-  mongoose.models.serviceVarient ||
-  mongoose.model("serviceVarient", servicVarientSchema);
+  mongoose.models.ServiceVarient ||
+  mongoose.model("ServiceVarient", ServiceVarientSchema);
 
 export default ServiceVarient;
